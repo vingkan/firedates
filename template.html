@@ -15,13 +15,11 @@
 		<header>
 			<h1>FireDates</h1>
 		</header>
-		
 		<div class="viewer">
 			<div id="user-viewer-1" class="view-box"></div><div id="user-viewer-2" class="view-box"></div>
 		</div>
 
 		<div id="editor"></div>
-
 		<div class="viewer">
 			<button id="run-code">Run</button><button id="stop-code">Stop</button>
 		</div>
@@ -31,8 +29,9 @@
 		<script type="text/javascript" src="lib/generator.js"></script>
 		<script type="text/javascript" src="lib/viewer.js"></script>
 		<script type="text/javascript">
-		
+
 			Generator.generateUser(function(user){
+				console.log(user)
 				console.log(user.results[0])
 			});
 			Generator.generateUser(function(user){
@@ -44,6 +43,7 @@
 			var key = Generator.continuousUser(function(user){
 				Viewer.showUser(user.results[0], 2)
 			});
+			Viewer.Editor.toClear.push(key);
 
 		</script>
 
