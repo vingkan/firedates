@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FireDates</title>
+		<link rel="icon" type="img/png" href="style/img/favicon.png" style="width:30px;">
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<!-- EXTERNAL SCRIPTS -->
+		<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<!-- LOCAL SCRIPTS -->
+		<script type="text/javascript" src="lib/generator.js"></script>
+	</head>
+	<body>
+
+		<h1>FireDates</h1>
+
+		<script type="text/javascript">
+
+			Generator.generateUser(console.log.bind(console));
+			Generator.generateUser(function(user){
+				console.log(user.results[0])
+			});
+
+		</script>
+
+	</body>
+</html>
