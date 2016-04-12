@@ -23,7 +23,7 @@
 		<div id="editor"></div>
 
 		<div class="viewer">
-			<button>Run</button><button>Stop</button>
+			<button id="run-code">Run</button><button id="stop-code">Stop</button>
 		</div>
 
 		<!-- LOCAL SCRIPTS -->
@@ -31,8 +31,7 @@
 		<script type="text/javascript" src="lib/generator.js"></script>
 		<script type="text/javascript" src="lib/viewer.js"></script>
 		<script type="text/javascript">
-
-			Generator.generateUser(console.log.bind(console));
+		
 			Generator.generateUser(function(user){
 				console.log(user.results[0])
 			});
